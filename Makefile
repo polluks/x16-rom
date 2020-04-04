@@ -178,7 +178,7 @@ all: $(PREFIXED_GEOS_OBJS)
 
 	$(AS) -o keymap/keymap.o keymap/keymap.s
 
-	(cd charset; bash convert.sh)
+	(cd charset; $(SHELL) convert.sh)
 	$(AS) -o charset/petscii.o charset/petscii.tmp.s
 	$(AS) -o charset/iso-8859-15.o charset/iso-8859-15.tmp.s
 
